@@ -1,0 +1,241 @@
+:root {
+  --preto: #0f0f0f;
+  --cinza-escuro: #1f1f1f;
+  --cinza-medio: #5f5f5f;
+  --cinza-claro: #d9d9d9;
+  --branco: #f5f5f5;
+  --dourado: #c9a84f;
+  --dourado-claro: #f0d88b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--preto);
+  color: var(--branco);
+  line-height: 1.6;
+}
+
+.hero {
+  min-height: 95vh;
+  background: linear-gradient(to right, rgba(15, 15, 15, 0.9), rgba(15, 15, 15, 0.55)),
+    url("https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.4rem 8%;
+  border-bottom: 1px solid rgba(201, 168, 79, 0.35);
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--dourado);
+  letter-spacing: 0.06rem;
+  font-size: 1.2rem;
+}
+
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.top-nav a {
+  color: var(--branco);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: 0.25s;
+}
+
+.top-nav a:hover {
+  color: var(--dourado-claro);
+  border-bottom-color: var(--dourado);
+}
+
+.hero-content {
+  max-width: 720px;
+  margin: 5rem 0;
+}
+
+.eyebrow {
+  color: var(--dourado-claro);
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 4.8vw, 3.8rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  color: var(--cinza-claro);
+  max-width: 62ch;
+  margin-bottom: 1.4rem;
+}
+
+.cta {
+  display: inline-block;
+  background-color: var(--dourado);
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.45rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 168, 79, 0.35);
+}
+
+.section {
+  padding: 4rem 8%;
+}
+
+.section-title {
+  margin-bottom: 1.6rem;
+}
+
+.section-title h2 {
+  color: var(--dourado);
+  margin-bottom: 0.4rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.section-title p {
+  color: var(--cinza-claro);
+}
+
+.grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.philosophers-grid,
+.topics-grid,
+.recent-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background-color: var(--cinza-escuro);
+  border: 1px solid rgba(201, 168, 79, 0.2);
+  border-radius: 0.85rem;
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 168, 79, 0.65);
+}
+
+.philosopher-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  filter: grayscale(35%);
+}
+
+.card-content,
+.topic-card,
+.mini-card {
+  padding: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 0.55rem;
+  color: var(--dourado-claro);
+}
+
+.card p {
+  color: #ebebeb;
+}
+
+.card a,
+.topic-card button {
+  margin-top: 0.8rem;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--dourado);
+  font-weight: 600;
+}
+
+.topic-card button {
+  background: transparent;
+  border: 1px solid var(--dourado);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.topic-card button:hover {
+  background-color: rgba(201, 168, 79, 0.13);
+}
+
+.news-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.news-item {
+  padding: 1rem;
+  border-left: 4px solid var(--dourado);
+  background-color: #161616;
+  border-radius: 0 0.55rem 0.55rem 0;
+}
+
+.news-item h3 {
+  color: var(--dourado-claro);
+  margin-bottom: 0.45rem;
+}
+
+.news-item span {
+  color: var(--cinza-claro);
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+footer {
+  border-top: 1px solid rgba(201, 168, 79, 0.35);
+  padding: 1.6rem 8%;
+  text-align: center;
+  color: var(--cinza-claro);
+  display: grid;
+  gap: 0.45rem;
+}
+
+@media (max-width: 700px) {
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding-inline: 5%;
+  }
+
+  .section,
+  footer {
+    padding-inline: 5%;
+  }
+}
